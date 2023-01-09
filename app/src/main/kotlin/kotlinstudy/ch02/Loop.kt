@@ -11,7 +11,14 @@ fun fizzBuzz(i: Int) = when{
     else -> "$i "
 }
 
+fun isLetter(c: Char) = c in 'a'..'z' || c in 'A'..'Z'
+fun isNotDigit(c: Char) = c!in '0'..'9'
 
+fun recognize(c: Char) = when (c){
+    in '0'..'9' -> "It's Digit"
+    in 'a'..'z', in 'A'..'Z' -> "It's letter!"
+    else -> "Idk"
+}
 
 fun main(){
     for (i in 1..100) {
@@ -37,4 +44,14 @@ fun main(){
     for ((index, element) in list.withIndex()) {
         println("$index: $element")
     }
+
+    println(isLetter('A'))
+    println(isNotDigit('5'))
+    println(isNotDigit('x'))
+
+    println(recognize('A'))
+    println(recognize('B'))
+    println(recognize('1'))
+    println(recognize('!'))
+
 }
