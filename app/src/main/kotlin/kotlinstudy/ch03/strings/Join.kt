@@ -1,14 +1,17 @@
 @file:JvmName("StringFunctions")
+
 package kotlinstudy.ch03.strings
 
-val UNIX_LINE_SEPARATOR ="\n"
+import java.util.StringJoiner
+
+val UNIX_LINE_SEPARATOR = "\n"
 
 @JvmOverloads
-fun <T> joinToString(
+fun <T> joinToStringOld(
         collection: Collection<T>,
-        separator: String =", ",
-        prefix: String ="",
-        postfix: String =""
+        separator: String = ", ",
+        prefix: String = "",
+        postfix: String = ""
 ): String {
     val result = StringBuilder(prefix)
     for ((index, element) in collection.withIndex()) {
@@ -19,4 +22,24 @@ fun <T> joinToString(
     return result.toString()
 }
 
-fun String.lastChar(): Char = this[length-1] // get(length-1)
+fun <T> Collection<T>.joinToString(
+        separator: String = ",",
+        prefix: String = "",
+        postfix: String = ""
+): String {
+    val result = StringBuilder(prefix)
+    for ((index, element) in this.withIndex()) {
+        if (index > 0) result.append(separator)
+        result.append(element)
+    }
+    result.append(postfix)
+    return result.toString()
+}
+
+fun Collection<String>.join(
+    separator: String = ", ",
+    prefix: String = "",
+    postfix: String = ""
+) = joinToString(separator, prefix, postfix)
+
+fun String.lastChar(): Char = this[length - 1] // get(length-1)

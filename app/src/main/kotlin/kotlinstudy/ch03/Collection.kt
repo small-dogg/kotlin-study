@@ -1,6 +1,7 @@
 package kotlinstudy.ch03
 
 import kotlinstudy.ch03.strings.joinToString
+import kotlinstudy.ch03.strings.joinToStringOld
 import kotlinstudy.ch03.strings.lastChar
 import kotlinstudy.ch03.strings.lastChar as last
 
@@ -24,14 +25,18 @@ fun main() {
     println(strings.get(1))
     println(numbers.max())
 
-    println(joinToString(listOf(1, 2, 3), ";", "(", ")"))
-    println(joinToString(collection = listOf(1, 2, 3), prefix = "(", separator = ";", postfix =  ")"))
+    println(joinToStringOld(listOf(1, 2, 3), ";", "(", ")"))
+    println(joinToStringOld(collection = listOf(1, 2, 3), prefix = "(", separator = ";", postfix =  ")"))
 
-    println(joinToString(listOf(1, 2, 3)))
-    println(joinToString(listOf(1, 2, 3), prefix="[", postfix = "]"))
+    println(joinToStringOld(listOf(1, 2, 3)))
+    println(joinToStringOld(listOf(1, 2, 3), prefix="[", postfix = "]"))
 
     println("Hello".lastChar())
     println("Hello".last())
 
+    val list = listOf(1, 2, 3)
+    val set = setOf(1, 2, 3)
 
+    println(list.joinToString())
+    println(set.joinToString())
 }
