@@ -19,6 +19,6 @@ fun main() {
     view.click()
 
     val view2: View = Button()
-    view.showOff()
+    view2.showOff()
 
 }
