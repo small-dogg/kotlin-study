@@ -1,6 +1,5 @@
 package kotlinstudy.ch03.collection
 
-import jdk.nashorn.internal.runtime.regexp.RegExpFactory.validate
 import java.lang.IllegalArgumentException
 
 class User(val id: Int, val name:String, val address: String)
