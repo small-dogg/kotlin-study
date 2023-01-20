@@ -7,7 +7,3 @@ internal class TalkativeButton: Focusable {
 
 fun TalkativeButton.giveSpeech() {
 }
-
-fun main() {
-
-}
