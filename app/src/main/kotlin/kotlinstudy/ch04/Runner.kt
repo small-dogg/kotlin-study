@@ -1,10 +1,10 @@
 package kotlinstudy.ch04
 
 fun main() {
-    val button = Button()
+    val buttonOld = ButtonOld()
 
-    button.showOff()
-    button.setFocus(false)
-    button.click()
+    buttonOld.showOff()
+    buttonOld.setFocus(false)
+    buttonOld.click()
 
 }
