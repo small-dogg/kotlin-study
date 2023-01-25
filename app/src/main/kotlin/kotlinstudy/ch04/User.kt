@@ -32,3 +32,7 @@ package kotlinstudy.ch04
 ////기반클래스의 생성자 호출
 //class TwitterUser(nickname: String) : User(nickname) {}
 
+//외부에서 인스턴스화 하지 못하게 막으려면 이처럼 priavate 변경자로 인스턴스 생성을 막을 수 있음
+//class Secretive private constructor(){}
+
+//
